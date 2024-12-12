@@ -44,7 +44,7 @@ exports.register = async (req, res) => {
         const profilePictureUrl = `https://storage.googleapis.com/${profilePictureRef.bucket.name}/${profilePictureRef.name}`;
 
         // Upload KTP ke Firebase Storage
-        const idCardRef = storage.bucket('casptone-cc').file(`idCards/${userRecord.uid}`);
+        const idCardRef = storage.bucket('Your_bucket_name').file(`idCards/${userRecord.uid}`);
         await idCardRef.save(idCard.buffer);
         await idCardRef.makePublic();
         const idCardUrl = `https://storage.googleapis.com/${idCardRef.bucket.name}/${idCardRef.name}`;
