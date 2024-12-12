@@ -1,10 +1,10 @@
 const admin = require('firebase-admin');
-const serviceAccount = require('/Login Register/src/config/capstone--c242-ps301-firebase-adminsdk-h9m78-e84cf25a7c.json');
+const serviceAccount = require('service_account');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://capstone--c242-ps301.firebaseio.com",
-  storageBucket: "casptone-cc" 
+  databaseURL: "Your_database_url",
+  storageBucket: "Your_bucket_name" 
 });
 
 const db = admin.firestore();
